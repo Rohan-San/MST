@@ -46,17 +46,18 @@ int spanningTree(int V, vector<pair<int, pair<int, int>>> &edges)
 int main()
 {
   int V, E;
-  cout << "Enter the number of vertices and edges of the graph:\n";
+  cout << "Enter number of vertices & edges of the graph:" << endl;
   cin >> V >> E;
   vector<pair<int, pair<int, int>>> edges;
-  cout << "Enter the adjacency list and weights:\n";
+  cout << "Enter source, destination, and weight of each edge:" << endl;
   for (int i = 0; i < E; i++)
   {
     int u, v, w;
     cin >> u >> v >> w;
     edges.push_back({w, {u, v}});
   }
-  cout << spanningTree(V, edges) << "\n";
+  cout << "The total weight is: " << spanningTree(V, edges) << endl;
+  cout << "Traversal order_" << endl;
   for (auto x : ans)
   {
     cout << x.first << '-' << x.second << endl;
